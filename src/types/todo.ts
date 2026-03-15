@@ -1,3 +1,5 @@
+import type { Rarity } from "./game";
+
 export type Priority = "low" | "medium" | "high";
 
 export interface Todo {
@@ -6,4 +8,8 @@ export interface Todo {
   completed: boolean;
   priority: Priority;
   createdAt: number;
+  // 游戏化字段
+  rarity: Rarity;
+  xpReward: number;
+  completedAt?: number;
 }
